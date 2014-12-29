@@ -77,9 +77,6 @@ impl Window {
     height : u32) ->
     Window {
     let glfw = glfw::init(glfw::FAIL_ON_ERRORS).unwrap();
-    glfw.window_hint(glfw::WindowHint::ContextVersion(3, 2));
-    glfw.window_hint(glfw::WindowHint::OpenglForwardCompat(true));
-    glfw.window_hint(glfw::WindowHint::OpenglProfile(glfw::OpenGlProfileHint::Core));
 
     let (window, events) = glfw
     .create_window(width, height, "no title", glfw::WindowMode::Windowed)
