@@ -3,3 +3,9 @@
 name = "gosu-rs"
 version = "0.0.1"
 authors = ["oliver"]
+
+[dependencies.gfx]
+git = "http://github.com/gfx-rs/gfx-rs"
+
+[dependencies.glfw]
+git = "https://github.com/bjz/glfw-rs.git"

@@ -68,14 +68,15 @@ static FRAGMENT_SRC: gfx::ShaderSource<'static> = shaders! {
 
 
 pub struct Window {
-  graphics : gfx::Graphics,
-  window : i32,
+  graphics : gfx::Graphics<gfx::GlDevice, gfx::GlCommandBuffer>,
+  window : glfw::Window,
 }
 
 impl Window {
   pub fn new(width : u32,
     height : u32) ->
     Window {
+    let glfw = glfw::init(glfw::FAIL_ON_ERRORS).unwrap();
     glfw.window_hint(glfw::WindowHint::ContextVersion(3, 2));
     glfw.window_hint(glfw::WindowHint::OpenglForwardCompat(true));
     glfw.window_hint(glfw::WindowHint::OpenglProfile(glfw::OpenGlProfileHint::Core));
