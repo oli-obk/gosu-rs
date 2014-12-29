@@ -4,6 +4,10 @@ name = "gosu-rs"
 version = "0.0.1"
 authors = ["oliver"]
 
+[lib]
+name = "gosu"
+path = "src/lib.rs"
+
 [dependencies.gfx]
 git = "http://github.com/gfx-rs/gfx-rs"
 
